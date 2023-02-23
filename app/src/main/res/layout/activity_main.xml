@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+
+                <Button
+                    android:id="@+id/btn_main"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:background="#00ff0000"
+                    android:backgroundTint="#FFFFFF"
+                    android:gravity="left"
+                    android:paddingLeft="20dp"
+                    android:paddingTop="20sp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="20dp"
+                    android:text="Yes 렌즈"
+                    android:textColor="#FF5E00"
+                    android:textSize="25sp" />
+                <!--android:background="#00ff0000" 는 테두리 없애는것-->
+
+
+                <ImageButton
+                    android:id="@+id/btn_menu"
+                    android:layout_width="50sp"
+                    android:layout_height="70sp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#ffffff"
+                    android:src="@drawable/ic_baseline_menu_24" />
+
+
+                <ImageButton
+                    android:id="@+id/icon_search"
+                    android:layout_width="40sp"
+                    android:layout_height="70sp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#ffffff"
+                    android:src="@drawable/ic_baseline_search_24" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--<RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="60dp">
+
+                    <EditText
+                        android:id="@+id/edit_search"
+                        android:layout_width="320dp"
+                        android:layout_height="50sp"
+                        android:layout_marginLeft="20sp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/border_main"
+                        android:hint="검색어를 입력하세요" />
+
+                    <ImageButton
+                        android:id="@+id/icon_search2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@id/edit_search"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/ic_baseline_search_24" />
+
+                </RelativeLayout>
+                //검색-->
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_gravity="center"
+                        >
+                        <!--android:layout_marginTop="0sp"나중에 필요하면 추가-->
+
+
+                        <androidx.viewpager2.widget.ViewPager2
+                            android:id="@+id/viewpager"
+                            android:layout_width="380dp"
+                            android:layout_height="220dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:clipChildren="false"
+                            android:clipToPadding="false"
+                            android:scaleType="fitXY" />
+
+                    </FrameLayout>
+                    //슬라이드
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="슬라이드를 넘기세요" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20sp">
+
+                        <!--전체메뉴-->
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ImageButton
+                                android:id="@+id/btn_menu2"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:layout_marginLeft="15dp"
+                                android:layout_weight="1"
+                                android:backgroundTint="#EAEAEA"
+                                android:src="@drawable/ic_baseline_menu_24" />
+                                //나중에 버튼모서리 둥글게 처리
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="투명렌즈" />
+
+                        </LinearLayout>
+
+                        <!--투명렌즈-->
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+
+                            <ImageButton
+                                android:id="@+id/page_clear"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:layout_weight="1"
+                                android:backgroundTint="#FFFFFF"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/lens_clear" />
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="투명렌즈" />
+
+                        </LinearLayout>
+
+                        <!--컬러렌즈-->
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+
+                            <ImageButton
+                                android:id="@+id/page_color"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:layout_weight="1"
+                                android:backgroundTint="#FFFFFF"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/lens_color" />
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="컬러렌즈" />
+
+                        </LinearLayout>
+
+
+                        <!--렌즈액-->
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+
+                            <ImageButton
+                                android:id="@+id/page_water"
+                                android:layout_width="match_parent"
+                                android:layout_height="100dp"
+                                android:layout_weight="1"
+                                android:backgroundTint="#FFFFFF"
+                                android:scaleType="fitXY"
+                                android:src="@drawable/image_glass" />
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="렌즈액" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#8C8C8C"
+    android:text="dddd"
+    />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20sp"
+                        android:layout_marginTop="30dp"
+                        android:text="추천상품"
+                        android:textColor="#FF5E00"
+                        android:textSize="40dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:id="@+id/recommend1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20sp"
+                            android:background="#00ff0000"
+                            android:drawableTop="@drawable/recomm1"
+                            android:text="아큐브 모이스트"
+                            android:textSize="15sp" />
+
+                        <Button
+                            android:id="@+id/recommend2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20sp"
+                            android:background="#00ff0000"
+                            android:drawableTop="@drawable/recomm2"
+                            android:text="오렌즈 아이라이터 블랙"
+                            android:textSize="15sp" />
+
+                        <Button
+                            android:id="@+id/recommend3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20sp"
+                            android:background="#00ff0000"
+                            android:drawableTop="@drawable/recomm3"
+                            android:text="옵티프리"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                //슬라이드부터
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+    <include layout="@layout/activity_drawer" />
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

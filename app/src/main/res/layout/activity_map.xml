@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MapActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#B4FFFF"
+            android:minWidth="0dp"
+            android:minHeight="0dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="20sp"
+            android:paddingRight="20dp"
+            android:paddingBottom="20dp"
+            android:text="Yes 렌즈"
+            android:textColor="#000000"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20sp"
+        android:layout_marginLeft="30dp"></Spinner>
+
+    <Spinner
+        android:id="@+id/spinner2"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="20sp"
+        android:layout_marginLeft="30dp"></Spinner>
+
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="50sp"
+        android:layout_marginLeft="20sp"
+        android:hint="찾고자하는 안경점 이름을 입력하세요"
+        android:textSize="15dp"/>
+
+    <Button
+        android:id="@+id/btn_search"
+        android:layout_width="70sp"
+        android:layout_height="40sp"
+        android:layout_gravity="right"
+        android:layout_marginRight="20sp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:background="#B4FFFF"
+        android:text="검색" />
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"/>
+
+</LinearLayout>
