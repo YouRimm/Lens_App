@@ -213,7 +213,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             };
 
-    private class CustomAdapter extends ArrayAdapter<String> {
+   /* private class CustomAdapter extends ArrayAdapter<String> {
         private ArrayList<String> items;
 
         public CustomAdapter(Context context, int textViewResourceId, ArrayList<String> objects) {
@@ -257,6 +257,6 @@ public class MainActivity extends AppCompatActivity {
             return v;
         }
 
-    }
+    }*/
 
         }
